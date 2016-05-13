@@ -2,8 +2,8 @@
   "name": "publicallypersonal",
   "version": "0.0.1",
   "description": "Andrew Tsai's personal website",
-  "main": "js/app.js",
   "scripts": {
+  	"start":"node driver/start.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
