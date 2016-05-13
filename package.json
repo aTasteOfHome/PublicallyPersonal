@@ -1,0 +1,24 @@
+{
+  "name": "publicallypersonal",
+  "version": "0.0.1",
+  "description": "Andrew Tsai's personal website",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aTasteOfHome/PublicallyPersonal.git"
+  },
+  "author": "Andrew Tsai <andrewtsai1994@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aTasteOfHome/PublicallyPersonal/issues"
+  },
+  "homepage": "https://github.com/aTasteOfHome/PublicallyPersonal#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.13.4",
+    "git": "^0.1.5"
+  }
+}
