@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html ng-app="app" >
 	<head>
-		<!--stylesheets-->
+		<!--Angular-->
+		<script type='text/javascript' src="bower_components/angular/angular.min.js"></script>
+		<script type='text/javascript' src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<!--Services-->
+		<script type='text/javascript' src="bower_components/jquery/dist/jquery.min.js"></script>
+		<!--Controllers-->
+		<script type='text/javascript' src="_client/controllers/MainController.js"></script>
+		<!--Main Script-->
+		<script type='text/javascript' src="_client/client.js"></script>
+		<!--UI frameworks-->
+		<!--Stylesheets-->
 		<link type="text/css" rel="stylesheet" href=""/>
 
 		<title>Andrew Tsai's Personal Webpage</title>
 	</head>
-	<body ng-controller="MainController">
+	<body>
 		<div ui-view>
 			<!--Main.html goes here-->
 		</div>
-		<div>
-			{{ test }}
-		</div>
-		<p>hello</p>
 	</body>
-	<!--Angular-->
-	<script type='text/javascript' src="bower_components/angular/angular.min.js"></script>
-	<script type='text/javascript' src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<!--Services-->
-	<script type='text/javascript' src="bower_components/jquery/dist/jquery-2.2.3.min.js"></script>
-	<!--Controllers-->
-	<script type='text/javascript' src="_client/controllers/MainController.js"></script>
-	<!--Main Script-->
-	<script type='text/javascript' src="_client/client.js"></script>
-	<!--Stylesheets-->
-	<!--UI frameworks-->
 </html>
