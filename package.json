@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Andrew Tsai's personal website",
   "scripts": {
-  	"start":"node driver/start.js",
+    "start": "node driver/start.js",
+    "build-css": "node-sass --include-path scss _client/style_sass/main.scss _client/style_css/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,10 @@
   "homepage": "https://github.com/aTasteOfHome/PublicallyPersonal#readme",
   "dependencies": {
     "bower": "^1.7.9",
-    "express": "^4.13.4",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "node-sass": "^3.7.0",
     "git": "^0.1.5"
   }
 }

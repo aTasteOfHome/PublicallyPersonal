@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html ng-app="app" >
+<html lang="en" ng-app="app" >
 	<head>
+		<meta charset="utf-8"> 
+		<!--JS libraries-->
+		<script type='text/javascript' src="bower_components/jquery/dist/jquery.min.js"></script>
 		<!--Angular-->
 		<script type='text/javascript' src="bower_components/angular/angular.min.js"></script>
 		<script type='text/javascript' src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-		<!--Services-->
-		<script type='text/javascript' src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type='text/javascript' src="bower_components/ngSticky/dist/sticky.min.js"></script>
 		<!--Controllers-->
 		<script type='text/javascript' src="_client/controllers/MainController.js"></script>
 		<!--Main Script-->
 		<script type='text/javascript' src="_client/client.js"></script>
 		<!--UI frameworks-->
 		<!--Stylesheets-->
-		<link type="text/css" rel="stylesheet" href=""/>
+		<link type="text/css" rel="stylesheet" href="_client/style_css/main.css"/>
 
 		<title>Andrew Tsai's Personal Webpage</title>
 	</head>
-	<body>
-		<div ui-view>
-			<!--Main.html goes here-->
-		</div>
+	<body ui-view>
 	</body>
 </html>

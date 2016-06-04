@@ -3,6 +3,7 @@
 //initialize with dependencies
 var app = angular.module("app",[
 	'ui.router',
+	'sticky',
 	'MainController'
 ]);
 
