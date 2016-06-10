@@ -1,40 +1,44 @@
-<div id = "home">
+<div id = "home" class="container">
 	<!--home-->
-	<h1>Welcome!</h1>
-	<h1>Andrew Tsai here.</h1>
+	<div class="spacer" class="spacer"></div>
+	<h1>Welcome! <span>Andrew Tsai here.</span></h1>
 	<h2>What would you like to know?</h2>
-</div>
-<div class = "navbar" sticky>
-	<a href="">About Me</a>
-	<div>
-		<!--dropdown-->
-		Experience
+	<div class = "navbar" sticky>
+		<a href="">About Me</a>
+		<div>
+			<!--dropdown-->
+			Experience
+		</div>
+		<a href=""><!--home button-->
+			<img src=""/>
+		</a>
+		<a href="">Links and Downloads</a>
+		<a href="">Contact Me</a>
 	</div>
-	<a href=""><!--home button-->
-		<img src=""/>
-	</a>
-	<a href="">Links and Downloads</a>
-	<a href="">Contact Me</a>
 </div>
-<div  id = "aboutMe">
-	<h2>About Me</h2>
+<table id = "aboutMe" class="container">
+	<th colspan="3">
+		<h2>About Me</h2>
+	</th>
 	<!--about me-->
-	<div>
-		<!--likes + dislikes, or "Here are a few of my favorite things"
-			a.k.a. left panel-->
-		<h3>A few of my favorite things</h3>
-	</div>
-	<div> <!--center panel-->
-		<img src=""/> <!--picture of me-->
-		<h3>What makes me tick</h3>
-		<p><!--blurb--></p>
-	</div>
-	<div> <!--right panel-->
-		<!--skills bar graph-->
-		<h3>Skills</h3>
-	</div>
-</div>
-<div>
+	<tr>
+		<td>
+			<!--likes + dislikes, or "Here are a few of my favorite things"
+				a.k.a. left panel-->
+			<h3>A few of my favorite things</h3>
+		</td> <!--center panel-->
+		<td>
+			<img src=""/> <!--picture of me-->
+			<h3>What makes me tick</h3>
+			<p><!--blurb--></p>
+		</td>
+		<td> <!--right panel-->
+			<!--skills bar graph-->
+			<h3>Skills</h3>
+		</td>
+	</tr>
+</table>
+<div class="container">
 	<h2>My work</h2>
 	<!--work and experiences-->
 	<h4>Workplace</h4>
@@ -43,36 +47,59 @@
 		<li>information</li>
 	</ul>
 </div>
-<div>
-	<h2>Resume</h2>
-	<!--resume + links-->
-	<!--resume pop-up-->
-	<a href=""><!--resume DL link-->Resume DL</a>
-	<a href="">
-		<!--Linkedin-->
-		<img src=""/>
-	</a>
+<table id="linksAndContact" class="container">
+	<tr>
+	<td>
+		<h2>Links & Downloads</h2>
+		<!--resume + links-->
+		<!--resume pop-up-->
+		<a href="">
+			<!--resume DL link-->
+			Resume
+			<img src="_client/images/download-arrow.png"/>
+		</a>
+		<a href="https://www.linkedin.com/in/andrew-tsai-15890b26">
+			<!--Linkedin-->
+			<img src="_client/images/linkedin_logo_package/LinkedIn logo/Screen/2-Color/Logo-2C-28px-R.png"/>
+		</a>
+		<a href="https://github.com/aTasteOfHome/PublicallyPersonal">
+			<!--gitHub-->
+			<img src="_client/images/GitHub-Mark/PNG/GitHub-Mark-64px.png" style="height: 36px"/>
+			<img src="_client/images/GitHub-Logos/GitHub_Logo.png" style="height: 36px"/>
+		</a>
+	</td>
+	<td>
+		<h2>Contact Me</h2>
+		<!--contact me + powered by heroku, MEAN stack, etc.-->
+		<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+			<div class="row container hcenter">
+				<label for="name">Name:</label><br />
+				<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+			</div>
+			<div class="container hcenter">
+				<label for="email">Email:</label><br />
+				<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+			</div>
+			<div class="container hcenter">
+				<label for="message">Your message:</label><br />
+				<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+			</div>
+			<input id="submit_button" type="submit" value="Send" />
+		</form>	
+	</td>
+	</tr>
+</table>
+<div class="container">
+	Resume download icon made by 
+	<a href="http://www.freepik.com" title="Freepik">Freepik</a> 
+	from 
+	<a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> 
+	is licensed by 
+	<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
 </div>
-<div>
-	<h2>Contact Me</h2>
-	<!--contact me + powered by heroku, MEAN stack, etc.-->
-	<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-		<div class="row">
-			<label for="name">Name:</label><br />
-			<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
-		</div>
-		<div class="row">
-			<label for="email">Email:</label><br />
-			<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-		</div>
-		<div class="row">
-			<label for="message">Your message:</label><br />
-			<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-		</div>
-		<input id="submit_button" type="submit" value="Send" />
-	</form>	
-</div>
-<div>
+<div class="container">
 	<p>hello world test:</p>
 	{{ test }}
+	<h1>Spacing element</h1>
+	<div class="spacer"></div>
 </div>

@@ -1,0 +1,25 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body div,
+body table,
+body tr,
+body td {
+	border-style: solid;
+	border-width: thin;
+	margin: .5vmin;
+	padding: .5vmin
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
