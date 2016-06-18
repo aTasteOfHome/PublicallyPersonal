@@ -3,27 +3,25 @@
 	<div class="spacer" class="spacer"></div>
 	<h1>Welcome! <span>Andrew Tsai here.</span></h1>
 	<h2>What would you like to know?</h2>
-	<table scroll class="navbar" ng-class="{stuckToTop:navbarStuck}">
+	<table scroll id="navbar" ng-class="{stuckToTop:navbarStuck}">
 		<tr>
-			<td>
-				<a href="">About Me</a>
+			<td ng-click = "goToSection('aboutMe')">
+				About Me
 			</td>
-			<td>
+			<td ng-click="goToSection('workExp')">
 				<div>
 					<!--dropdown-->
 					Experience
 				</div>
 			</td>
-			<td>
-				<a href=""><!--home button-->
-					<img src=""/>
-				</a>
+			<td ng-click="goToSection('home')">
+				<img src=""/>
 			</td>
-			<td>
-				<a href="">Links and Downloads</a>
+			<td ng-click="goToSection('linksAndContact')">
+				Links and Downloads
 			</td>
-			<td>
-				<a href="">Contact Me</a>
+			<td ng-click="goToSection('linksAndContact')">
+				Contact Me
 			</td>
 		</tr>
 	</table>
@@ -72,10 +70,10 @@
 		</td>
 	</tr>
 </table>
-<div class="container">
+<div id="workExp" class="container">
 	<h2>My work</h2>
 	<!--work and experiences-->
-	<div ng-repeat = "job in workExp">
+	<div ng-repeat = "job in jobs">
 		<h4>{{job.workplace}} | {{job.position}}</h4>
 		<h5>{{job.startDate}} - {{job.endDate}}</h5>
 		<ul ng-repeat = "info in job.info">
