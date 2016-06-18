@@ -67,6 +67,18 @@
 		<td class="aboutMeSide"> <!--right panel-->
 			<!--skills bar graph-->
 			<h3>What skills do I have?</h3>
+			<table id="skillsTable">
+				<tr>
+					<td colspan="3"></td>
+					<td ng-repeat="val in skillVals">{{val}}</td>
+				</tr>
+				<tr ng-repeat="skill in skills">
+					<td colspan="3">
+						{{skill.name}}
+					</td>
+					<td colspan="{{skill.skillLevel}}"></td>
+				</tr>
+			</table>
 		</td>
 	</tr>
 </table>

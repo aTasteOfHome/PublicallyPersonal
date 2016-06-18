@@ -37,6 +37,11 @@ table {
 	border-style:none;
 }
 
+#skillsTable{
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .spacer {
 	border-width: 0;
 	margin: 0;
@@ -45,6 +50,8 @@ table {
 
 .aboutMeSide{
 	width:5%;
+	padding-left: auto;
+	padding-right: auto;
 }
 .aboutMeCenter{
 	width:90%;

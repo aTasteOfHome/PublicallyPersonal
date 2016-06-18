@@ -40,5 +40,29 @@ app.controller('MainController', ['$scope', '$location', '$anchorScroll',
 				'Created and edited new Database Access Objects (DAOs) and service classes using hibernate.'
 			]
 		}];
+
+		$scope.skillVals=[1,2,3,4,5,6,7,8,9,10];
+		$scope.skills=[{
+			name: "Java",
+			skillLevel: "10"
+		},{
+			name: "Javascript",
+			skillLevel: "6"
+		},{
+			name: "Java (drink)",
+			skillLevel: "10"
+		},{
+			name: "HTML",
+			skillLevel: "7"
+		},{
+			name: "CSS",
+			skillLevel: "5"
+		},{
+			name: "Angular",
+			skillLevel: "4"
+		},{
+			name: "SQL",
+			skillLevel: "8"
+		}];
 	}]
 );
