@@ -3,18 +3,30 @@
 	<div class="spacer" class="spacer"></div>
 	<h1>Welcome! <span>Andrew Tsai here.</span></h1>
 	<h2>What would you like to know?</h2>
-	<div class = "navbar" sticky>
-		<a href="">About Me</a>
-		<div>
-			<!--dropdown-->
-			Experience
-		</div>
-		<a href=""><!--home button-->
-			<img src=""/>
-		</a>
-		<a href="">Links and Downloads</a>
-		<a href="">Contact Me</a>
-	</div>
+	<table scroll class="navbar" ng-class="{stuckToTop:navbarStuck}">
+		<tr>
+			<td>
+				<a href="">About Me</a>
+			</td>
+			<td>
+				<div>
+					<!--dropdown-->
+					Experience
+				</div>
+			</td>
+			<td>
+				<a href=""><!--home button-->
+					<img src=""/>
+				</a>
+			</td>
+			<td>
+				<a href="">Links and Downloads</a>
+			</td>
+			<td>
+				<a href="">Contact Me</a>
+			</td>
+		</tr>
+	</table>
 </div>
 <table id = "aboutMe" class="container">
 	<th colspan="3">
@@ -22,30 +34,54 @@
 	</th>
 	<!--about me-->
 	<tr>
-		<td>
+		<td class="aboutMeSide">
 			<!--likes + dislikes, or "Here are a few of my favorite things"
 				a.k.a. left panel-->
-			<h3>A few of my favorite things</h3>
+			<h3>What do I like?</h3>
 		</td> <!--center panel-->
-		<td>
+		<td class="aboutMeCenter">
 			<img src=""/> <!--picture of me-->
-			<h3>What makes me tick</h3>
-			<p><!--blurb--></p>
+			<h3>What's My Story</h3>
+			<p>
+				It's a big question to ask, when you think about it. Somehow, a few short paragraphs in a cozy little corner of the internet will contain all that I am, all that I was, and all that I hope to be. But, you came here for a story, and to learn about me, so I'll tell a short tale for your troubles.
+			</p>
+			<br>
+			<p>
+				I remember running away from home as a kid when I was around 9 or 10. The details escape me, but I dimly remember a miniature existential crisis of sorts, along with heated mentions of "bedtime" and "no astronomy." Whatever the reason, it was late, my parents were arguing in the other room over
+				how best to impresss upon the benefits of a good night's sleep, and I was out the door, running as fast and as far as my little legs would take me.
+			</p>
+			<p>
+				I didn't get very far, but I did make it to the edge of a nearby lake. It was dark, and scary, and I was feeling very small and alone, with nothing but crickets to keep me company.
+			</p>
+			<p>
+				After a while, though, I noticed lights from the houses on the other side of the lake, and I thought how much they looked like the stars I would watch through my telescope. I thought about how each one had its own Andrews and Andreas, Moms and Dads. Some stars were big, with many lights, and others small; Some were bright and happy, some tired and dim. Some were close, and yet others were far, far, away. But every star had a story to tell; all I had to do was watch, and listen.
+			</p>
+			<p>
+				And so I did. I've befriended a man who's become a legend in the small city he calls home, making a living off playing music on the street for passersby the past 30 years. I've talked with a cabbie from Syria, who told me of how his brothers found themselves on either side of the battlefield, one as a freedom fighter, and the other as conscript of Asaad. I've had dinner with a self-described "Sex Positive Feminist with a capital S-P-F" whose passion for human rights is matched only by her love of the finer points of Markov chain implementations. And, a long time ago, I took lessons from a music teacher who kept a picture of her family, long gone, on a nightstand next to the piano. In time, should you choose to contact me, I will tell you of how I resolved server downtimes through daily meetings and agenda updates, of how I took the initiative to teach myself modern web development frameworks and languages to build this website, and other stories filled with pertinent, career-related jargon. I do have a job to do, and I intend to do it well. But for now, I'd like you to take a deep breath and look at the points of light sitting around you, each with a story of their own. And one day, should you choose to take me in, I'd like to hear yours.
+			</p>
+			<br>
+			<p>
+				Best,
+				<br>
+				Andrew Tsai
+			</p>
 		</td>
-		<td> <!--right panel-->
+		<td class="aboutMeSide"> <!--right panel-->
 			<!--skills bar graph-->
-			<h3>Skills</h3>
+			<h3>What skills do I have?</h3>
 		</td>
 	</tr>
 </table>
 <div class="container">
 	<h2>My work</h2>
 	<!--work and experiences-->
-	<h4>Workplace</h4>
-	<h5>start - end</h5>
-	<ul>
-		<li>information</li>
-	</ul>
+	<div ng-repeat = "job in workExp">
+		<h4>{{job.workplace}} | {{job.position}}</h4>
+		<h5>{{job.startDate}} - {{job.endDate}}</h5>
+		<ul ng-repeat = "info in job.info">
+			<li>{{info}}</li>
+		</ul>
+	</div>
 </div>
 <table id="linksAndContact" class="container">
 	<tr>
