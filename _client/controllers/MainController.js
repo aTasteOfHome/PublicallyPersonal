@@ -39,6 +39,18 @@ app.controller('MainController', ['$scope', '$location', '$anchorScroll',
 				'Performed in-depth refactoring and updating of old, "legacy" code to follow Object-Oriented design principles rather than Procedural patterns.',
 				'Created and edited new Database Access Objects (DAOs) and service classes using hibernate.'
 			]
+		},{
+			workplace: 'Georgia Institute of Technology',
+			position: 'Associate Tutor',
+			startDate: 'February 2014',
+			endDate: 'May 2014',
+			info: [
+				'Tutored students 1-on-1 in various Computing subjects and classes',
+				'Reviewed and/or re-taught students of varying years and skill levels computing concepts ranging from basic coding' + 
+					'to data structures to CPU datapaths.',
+				'Assisted students with homework problems by explaining and/or elaborating upon the instructions and by providing' +
+					'students with tools and or methods to solve and debug their code.'
+			]
 		}];
 
 		$scope.skillVals=[1,2,3,4,5,6,7,8,9,10];

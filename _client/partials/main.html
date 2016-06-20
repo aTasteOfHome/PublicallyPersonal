@@ -41,7 +41,7 @@
 			<img src=""/> <!--picture of me-->
 			<h3>What's My Story</h3>
 			<p>
-				It's a big question to ask, when you think about it. Somehow, a few short paragraphs in a cozy little corner of the internet will contain all that I am, all that I was, and all that I hope to be. But, you came here for a story, and to learn about me, so I'll tell a short tale for your troubles.
+				It's a big question to ask, when you think about it. Somehow, these few short paragraphs in a cozy little corner of the internet will contain all that I am, all that I was, and all that I hope to be. But, you came here for a story, and to learn about me, so I'll tell a short tale for your troubles.
 			</p>
 			<br>
 			<p>
@@ -83,10 +83,10 @@
 	</tr>
 </table>
 <div id="workExp" class="container">
-	<h2>My work</h2>
+	<h2>Work and Projects</h2>
 	<!--work and experiences-->
 	<div ng-repeat = "job in jobs">
-		<h4>{{job.workplace}} | {{job.position}}</h4>
+		<h4>{{job.workplace}}{{job.position ? ' | ':''}}{{job.position}}</h4>
 		<h5>{{job.startDate}} - {{job.endDate}}</h5>
 		<ul ng-repeat = "info in job.info">
 			<li>{{info}}</li>
