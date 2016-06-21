@@ -78,6 +78,15 @@ table {
 	position: fixed;
 	left:0;
 	top:0;
-	z-index:100;
+	z-index:9999;
 	border-top:0;
+}
+
+.slick-prev {
+    left: 0px;
+    background-color: gray;
+}
+.slick-next {
+    right: 0px;
+    background-color: gray;
 }

@@ -4,7 +4,8 @@
 var app = angular.module("app",[
 	'ui.router',
 	'mySticky',
-	'MainController'
+	'MainController',
+	'slick'
 ]);
 
 
