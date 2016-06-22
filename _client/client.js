@@ -6,7 +6,8 @@ var app = angular.module("app",[
 	'mySticky',
 	'MainController',
 	'ContactFormController',
-	'slick'
+	'slick',
+	'smoothScroll'
 ]);
 
 

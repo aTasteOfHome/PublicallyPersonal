@@ -1,15 +1,24 @@
 var app = angular.module("MainController", []);
 
-app.controller('MainController', ['$scope', '$location', '$anchorScroll',
-	function($scope, $location, $anchorScroll){
+app.controller('MainController', ['$scope', '$location', 'smoothScroll',
+	function($scope, $location, smoothScroll){
 		$scope.test='Hello World!';
 
 		$scope.goToSection = function(sectionId) {
-			$location.hash(sectionId);
-			if(sectionId != 'home'){
-				$anchorScroll.yOffset=angular.element(document.querySelector('#navbar'))[0].offsetHeight;
+			console.log(sectionId);
+			var element = document.getElementById(sectionId);
+			var options = {
+				callbackBefore: function(element) {
+			        console.log('about to scroll to element', element);
+			    },
+			    callbackAfter: function(element) {
+			        console.log('scrolled to element', element);
+			    }
 			}
-			$anchorScroll();
+			if(sectionId != 'home'){
+				options.offset=angular.element(document.querySelector('#navbar'))[0].offsetHeight;
+			}
+			smoothScroll(element,options);
 		};
 
 		$scope.jobs=[{
