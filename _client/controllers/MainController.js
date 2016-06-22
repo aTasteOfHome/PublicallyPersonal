@@ -173,6 +173,10 @@ app.controller('MainController', ['$scope', '$location', '$anchorScroll',
 				name: 'Tycho'
 			},{
 				name: 'The Lumineers'
+			},{
+				name: 'Kid Cudi'
+			},{
+				name: 'J Cole'
 			}]
 		}]
 	}]
