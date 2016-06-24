@@ -7,7 +7,8 @@ var app = angular.module("app",[
 	'MainController',
 	'ContactFormController',
 	'slick',
-	'smoothScroll'
+	'smoothScroll',
+	'ngCookies'
 ]);
 
 

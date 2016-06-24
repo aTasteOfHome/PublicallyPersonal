@@ -20,7 +20,8 @@
     "jquery": "^2.2.3",
     "bootstrap": "^3.3.6",
     "angular-slick": "^0.2.1",
-    "ngSmoothScroll": "^1.7.1"
+    "ngSmoothScroll": "^1.7.1",
+    "angular-cookies": "^1.5.7"
   },
   "resolutions": {
     "angular": "^1.5.5"

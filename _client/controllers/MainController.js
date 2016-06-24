@@ -1,25 +1,21 @@
 var app = angular.module("MainController", []);
 
-app.controller('MainController', ['$scope', '$location', 'smoothScroll',
-	function($scope, $location, smoothScroll){
+app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cookies', '$window',
+	function($scope, $location, smoothScroll, $cookies, $window){
 		$scope.test='Hello World!';
 
 		$scope.goToSection = function(sectionId) {
-			console.log(sectionId);
 			var element = document.getElementById(sectionId);
-			var options = {
-				callbackBefore: function(element) {
-			        console.log('about to scroll to element', element);
-			    },
-			    callbackAfter: function(element) {
-			        console.log('scrolled to element', element);
-			    }
-			}
+			var options = {};
 			if(sectionId != 'home'){
 				options.offset=angular.element(document.querySelector('#navbar'))[0].offsetHeight;
 			}
 			smoothScroll(element,options);
 		};
+
+		$window.onbeforeunload = function(e){
+			$cookies.put('Tsai_Resume_Site_ScrollY',$window.scrollY);
+		}
 
 		$scope.jobs=[{
 			workplace: 'Epic Systems Corporation',
@@ -188,5 +184,16 @@ app.controller('MainController', ['$scope', '$location', 'smoothScroll',
 				name: 'J Cole'
 			}]
 		}]
+
+		//perform on load
+		var loc=$cookies.get('Tsai_Resume_Site_ScrollY');
+		if(typeof loc === 'string'){
+			smoothScroll('main', {
+				offset: (function(){
+					return -1*loc;
+				})()
+			});
+		}
+		$cookies.remove('Tsai_Resume_Site_ScrollY');
 	}]
 );
