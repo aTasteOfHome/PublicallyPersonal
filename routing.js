@@ -18,5 +18,9 @@ module.exports = function(){
     	res.sendFile(__dirname + req.params[0]);
     });
 
+    router.post('/sendMail', function(req, res){
+    	
+    });
+
     return router;
 };

@@ -1,6 +1,6 @@
 var app = angular.module("ContactFormController", []);
 
-app.controller('ContactFormController',['$scope', '$http','$animate', function($scope, $http, $animate){
+app.controller('ContactFormController',['$scope', '$http','$animate', function($scope, $http){
 	this.sendMail = function(){
 		var data = {
 			contactName : this.contactName,
