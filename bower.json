@@ -21,7 +21,10 @@
     "bootstrap": "^3.3.6",
     "angular-slick": "^0.2.1",
     "ngSmoothScroll": "^1.7.1",
-    "angular-cookies": "^1.5.7"
+    "angular-cookies": "^1.5.7",
+    "angular-formly": "^8.2.1",
+    "angular-formly-templates-bootstrap": "^6.3.2",
+    "api-check": "^7.5.5"
   },
   "resolutions": {
     "angular": "^1.5.5"

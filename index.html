@@ -2,27 +2,38 @@
 <html lang="en" ng-app="app" >
 	<head>
 		<meta charset="utf-8"> 
-		<!--Stylesheets-->
-		<link type="text/css" rel="stylesheet" href="_client/style_css/defaults.css"/>
+		<!--Downloaded Stylesheets-->
+		<link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
 		<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
 		<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+
+		<!--Custom Stylesheets-->
+		<link type="text/css" rel="stylesheet" href="_client/style_css/defaults.css"/>
 		<link type="text/css" rel="stylesheet" href="_client/style_css/main.css"/>
 		
 		<!--JS libraries-->
 		<script type='text/javascript' src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/api-check/dist/api-check.js"></script>
+
 		<!--Angular-->
 		<script type='text/javascript' src="bower_components/angular/angular.min.js"></script>
 		<script type='text/javascript' src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.min.js"></script>
-		<!--Controllers-->
-		<script type='text/javascript' src="_client/controllers/MainController.js"></script>
-		<script type='text/javascript' src="_client/controllers/ContactFormController.js"></script>
-		<!--Main Script-->
-		<script type='text/javascript' src="_client/client.js"></script>
+
 		<!--UI frameworks and tools-->
 		<script src="bower_components/slick-carousel/slick/slick.js"></script>
 		<script src="bower_components/angular-slick/dist/slick.js"></script>
 		<script src="bower_components/ngSmoothScroll/angular-smooth-scroll.min.js"></script>
+		<script src="bower_components/angular-formly/dist/formly.js"></script>
+    	<script src="bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.js"></script>
+
+    	<!--Main Script-->
+		<script type='text/javascript' src="_client/client.js"></script>
+
+		<!--Controllers-->
+		<script type='text/javascript' src="_client/controllers/MainController.js"></script>
+		<script type='text/javascript' src="_client/controllers/ContactFormController.js"></script>
+
 		<!--directives-->
 		<script type='text/javascript' src="_client/directives/mySticky.js"></script>
 

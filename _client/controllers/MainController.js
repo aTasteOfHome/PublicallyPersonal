@@ -2,8 +2,8 @@ var app = angular.module("MainController", []);
 
 app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cookies', '$window',
 	function($scope, $location, smoothScroll, $cookies, $window){
-		$scope.test='Hello World!';
 
+		//navbar functions
 		$scope.goToSection = function(sectionId) {
 			var element = document.getElementById(sectionId);
 			var options = {};
@@ -13,10 +13,12 @@ app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cooki
 			smoothScroll(element,options);
 		};
 
+		//listener for refresh
 		$window.onbeforeunload = function(e){
 			$cookies.put('Tsai_Resume_Site_ScrollY',$window.scrollY);
 		}
 
+		//add all scope data
 		$scope.jobs=[{
 			workplace: 'Epic Systems Corporation',
 			position: 'Technical Services - Reporting Systems',

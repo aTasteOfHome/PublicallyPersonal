@@ -1,4 +1,4 @@
-<div id = "home" class="container" ng-controller='MainController'>
+<div id = "home">
 	<!--home-->
 	<div class="spacer" class="spacer"></div>
 	<h1>Welcome! <span>Andrew Tsai here.</span></h1>
@@ -103,7 +103,7 @@
 		</ul>
 	</div>
 </div>
-<table id="linksAndContact" class="container">
+<table id="linksAndContact" class="container" ng-controller='ContactFormController as cfc'>
 	<tr>
 	<td>
 		<h2>Links & Downloads</h2>
@@ -125,23 +125,32 @@
 		</a>
 	</td>
 	<td>
-		<h2>Contact Me</h2>
 		<!--contact me + powered by heroku, MEAN stack, etc.-->
 		<form id="contactForm" name="contactForm" ng-submit="sendMail()">
-			<div class="row container hcenter">
+			<h2>Contact Me</h2>
+			<div>
 				<label for="name">Name:</label><br />
 				<input id="contactName" class="input" name="name" type="text" value="" ng-model="contactName" required/><br />
 			</div>
-			<div class="container hcenter">
+			<div>
 				<label for="email">Email:</label><br />
 				<input id="contactEmail" class="input" name="email" type="text" value="" ng-model="contactEmail" required/><br />
 			</div>
-			<div class="container hcenter">
+			<div>
 				<label for="message">Your message:</label><br />
 				<textarea id="contactMsg" class="input" name="message" rows="6" ng-model="contactMsg" required></textarea><br />
 			</div>
 			<input id="contactButton" type="submit" value="Send" />
-		</form>	
+		</form>
+
+		<form novalidate id='contactFormly' ng-submit="cfc.sendMail()">
+			<h2>Contact Me</h2>
+			<formly-form model='cfc.contact' fields='cfc.contactFields' form='cfc.contactForm'>
+				<button type='submit' class='btn btn-primary' ng-disabled='cfc.contactForm.$invalid'>
+					Send
+				</button>
+			</formly-form>
+		</form>
 	</td>
 	</tr>
 </table>

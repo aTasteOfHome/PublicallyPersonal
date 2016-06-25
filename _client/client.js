@@ -8,7 +8,9 @@ var app = angular.module("app",[
 	'ContactFormController',
 	'slick',
 	'smoothScroll',
-	'ngCookies'
+	'ngCookies',
+	'formly',
+	'formlyBootstrap'
 ]);
 
 
