@@ -1,4 +1,4 @@
-var app = angular.module("MainController", []);
+var app = angular.module("MainController", ['ContactFormController']);
 
 app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cookies', '$window',
 	function($scope, $location, smoothScroll, $cookies, $window){

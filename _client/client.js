@@ -5,7 +5,6 @@ var app = angular.module("app",[
 	'ui.router',
 	'mySticky',
 	'MainController',
-	'ContactFormController',
 	'slick',
 	'smoothScroll',
 	'ngCookies',

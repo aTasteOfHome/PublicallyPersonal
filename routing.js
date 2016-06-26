@@ -1,8 +1,10 @@
 /**
 * Dependencies
 */
+var mailer=require('./_server/sendMail.js')
 var express = require('express');
 var router= express();
+
 
 //include static files in the client dir
 router.use(express.static(__dirname+'/_client'));
@@ -18,9 +20,7 @@ module.exports = function(){
     	res.sendFile(__dirname + req.params[0]);
     });
 
-    router.post('/sendMail', function(req, res){
-    	
-    });
+    router.route('/sendMail').post(mailer.sendMail);
 
     return router;
 };

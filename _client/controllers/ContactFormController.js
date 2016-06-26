@@ -49,13 +49,13 @@ app.controller('ContactFormController',['$scope', '$http', function($scope, $htt
 		console.log(data.contactEmail);
 		console.log(data.contactMsg);
 
-		// $http.post('/contact-form',data)
-		// 	.success(function(data,status,headers,config){
-		// 		//when response is available, show that message was sent
-		// 	})
-		// 	.error(function(data, status, headers, config){
-		// 		//called asynch if an error happens, or server returns response with error status.
-		// 	});
+		$http.post('./sendMail',data)
+			.success(function(data,status,headers,config){
+				//when response is available, show that message was sent
+			})
+			.error(function(data,status,headers,config){
+				//when response is available, show that message was sent
+			});
 
 	};
 }]);

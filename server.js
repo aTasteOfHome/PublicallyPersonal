@@ -2,12 +2,17 @@
  * Dependencies
  */
 var express = require('express');
+var bodyParser = require('body-parser');
 
 
 /**
 * Express.js setup
 */
 var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+	extended: true
+}))
 
 /**
 * Backend routing setup
