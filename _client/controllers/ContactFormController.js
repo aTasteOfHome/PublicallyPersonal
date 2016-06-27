@@ -2,6 +2,11 @@
 
 var app = angular.module("ContactFormController", []);
 
+app.run(function(formlyConfig, formlyValidationMessages, formlyApiCheck){
+
+	formlyValidationMessages.addStringMessage('required', 'This field is required');
+});
+
 app.controller('ContactFormController',['$scope', '$http', function($scope, $http){
 	var cfc=this;
 
@@ -22,12 +27,16 @@ app.controller('ContactFormController',['$scope', '$http', function($scope, $htt
 			type: 'input',
 			templateOptions: {
 				type: 'text',
-				label: 'Email',
-				required: true
+				label: 'Email'
 			},
 			validators: {
-				isEmailValid: function($viewValue, $modelValue, scope){
-					return true;
+				contactEmail: {
+					expression: function($viewValue, $modelValue, scope){
+						var value = $modelValue || $viewValue;
+						console.log(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value));
+						return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
+					},
+					message: '$viewValue + " is not a valid e-mail address"'
 				}
 			}
 		},{
@@ -52,9 +61,15 @@ app.controller('ContactFormController',['$scope', '$http', function($scope, $htt
 		$http.post('./sendMail',data)
 			.success(function(data,status,headers,config){
 				//when response is available, show that message was sent
+				console.log(data);
+
+				//show success box
 			})
 			.error(function(data,status,headers,config){
 				//when response is available, show that message was sent
+				console.log(data);
+
+				//show error box
 			});
 
 	};

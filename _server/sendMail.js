@@ -12,12 +12,25 @@ exports.sendMail = function(req, res){
 		text: data.contactMsg
 	};
 
-	transporter.sendMail(mailOptions, function(error, info){
+	transporter.sendMail(mailOptions, function(error, response){
 		if(error){
+
+			response.json({
+				Status: false,
+				message: error
+			});
 			//handle the error
-			return console.log(error);
+			console.log(error);
+			console.log(response);
+
+		}else{
+			res.json({ 
+				Status : true,
+ 				message : 'Message sent!'
+			});
+
+			console.log('Message sent!');
 		}
-		console.log('Message sent: ' + info.response)
 	});
 
 	res.json(data);
