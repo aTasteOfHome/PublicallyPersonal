@@ -33,7 +33,6 @@ app.controller('ContactFormController',['$scope', '$http', function($scope, $htt
 				contactEmail: {
 					expression: function($viewValue, $modelValue, scope){
 						var value = $modelValue || $viewValue;
-						console.log(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value));
 						return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
 					},
 					message: '$viewValue + " is not a valid e-mail address"'

@@ -107,83 +107,141 @@ app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cooki
 		$scope.likeTypes=[{
 			name: 'Hobbies',
 			likes: [{
-				name: 'Guitar'
+				name: 'Guitar',
+				img: 'guitar.jpg'
 			},{
-				name: 'Piano'
+				name: 'Piano',
+				img: 'piano.jpg'
 			},{
-				name: 'Singing'
+				name: 'Singing',
+				img: 'singing.jpg'
 			},{
-				name: 'Songwriting'
+				name: 'Songwriting',
+				img: 'writing-music.jpg'
 			},{
-				name: 'Exercise'
+				name: 'Exercise',
+				img: 'exercise.png'
 			},{
-				name: 'Food'
+				name: 'Food',
+				img: 'food.jpg'
 			}]
 		},{
-			name:"Books",
+			name:"Books/Reading",
 			likes:[{
-				name:'Freakonomics'
+				name:'Freakonomics',
+				img: 'Freakonomics.jpg'
 			},{
-				name:'Outliers'
+				name:'Outliers',
+				img: 'Outliers.jpg'
 			},{
-				name: '100 Years of Solitude'
+				name: '100 Years of Solitude',
+				img: '100YearsOfSolitude.jpg'
 			},{
-				name: 'American Gods'
+				name: 'Significant Digits',
+				img: 'significantDigits.png'
 			},{
-				name: 'Significant Digits'
+				name: 'Harry Potter (series)',
+				img: 'HPatGoF.jpg'
 			},{
-				name: 'Harry Potter (series)'
+				name: 'Good Omens',
+				img: 'GoodOmens.jpg'
 			},{
-				name: 'Good Omens'
+				name: 'Death Trilogy (Discworld)',
+				img: 'DeathTrilogy.jpg'
 			},{
-				name: 'Death Trilogy (Discworld)'
+				name: 'Blindsight',
+				img: 'Blindsight.jpg'
+			},{
+				name: 'Worm',
+				img: 'worm.jpg'
 			}]
 		},{
 			name:"Movies",
 			likes:[{
-				name:'12 Angry Men'
+				name:'12 Angry Men',
+				img: 'twelve_angry_men.jpg'
 			},{
-				name: 'Exit Through the Gift Shop'
+				name: 'Exit Through the Gift Shop',
+				img: 'exit_through_the_gift_shop.jpg'
 			},{
-				name: 'Ex Machina'
+				name: 'Ex Machina',
+				img:'ExMachina.jpg'
 			},{
-				name: 'The Dark Knight'
+				name: 'The Dark Knight',
+				img: 'TheDarkKnight.jpg'
 			},{
-				name: 'Spirited Away'
+				name: 'Edge of Tomorrow',
+				img:'EdgeOfTomorrow.jpg'
 			},{
-				name: 'Speedy Scandal'
+				name: 'Mad Max: Fury road',
+				img: 'MadMaxFuryRoad.jpg'
 			},{
-				name: 'Hot Fuzz'
+				name: 'Spirited Away',
+				img: 'SpiritedAway.jpg'
 			},{
-				name: 'Anchorman'
+				name: 'Princess Mononoke',
+				img: 'PrincessMononoke.jpg'
+			},{
+				name: "Howl's Moving Castle",
+				img: 'HowlsMovingCastle.jpg'
+			},{
+				name: 'Kung Fu Hustle',
+				img: 'KungFuHustle.jpg'
+			},{
+				name: 'Hot Fuzz',
+				img: 'HotFuzz.jpg'
+			},{
+				name: 'Shaun of the Dead',
+				img: 'ShaunOfTheDead.jpg'
+			},{
+				name: 'In Bruges',
+				img: 'InBruges.jpg'
+			},{
+				name: 'Seven Psychopaths',
+				img: 'SevenPsychopaths.jpg'
+			},{
+				name: 'Airplane!',
+				img: 'Airplane.jpg'
 			}]
 
 		},{
 			name: 'Music',
 			likes: [{
-				name: 'Ratatat'
+				name: 'Ratatat',
+				img: 'ratatat.jpg'
 			},{
-				name: 'The Strokes'
+				name: 'The Strokes',
+				img: 'TheStrokes.jpg'
 			},{
-				name: 'Alabama Shakes'
+				name: 'Alabama Shakes',
+				img: 'AlabamaShakes.jpg'
 			},{
-				name: 'Shakey Graves'
+				name: 'Shakey Graves',
+				img: 'ShakeyGraves.jpg'
 			},{
-				name: 'Julien Baker'
+				name: 'Julien Baker',
+				img: 'Julien_Baker.jpg'
 			},{
-				name: 'Death Cab for Cutie'
+				name: 'J Cole',
+				img: 'JCole.png'
 			},{
-				name: 'The Black Keys'
+				name: 'Death Cab for Cutie',
+				img: 'DeathCabForCutie.jpg'
 			},{
-				name: 'Bombay Bicycle Club'
+				name: 'The Black Keys',
+				img: 'TheBlackKeys.jpg'
 			},{
-				name: 'Tycho'
+				name: 'Bombay Bicycle Club',
+				img: 'BombayBicycleClub.jpg'
 			},{
-				name: 'The Lumineers'
+				name: 'Matthew Robert Cooper',
+				img: 'SomeDaysAreBetterThanOthers.jpg'
 			},{
-				name: 'Kid Cudi'
+				name: 'The Lumineers',
+				img: 'TheLumineers.jpg'
 			},{
-				name: 'J Cole'
+				name: 'Kid Cudi',
+				img: 'KidCudi.jpg'
 			}]
 		}]
 

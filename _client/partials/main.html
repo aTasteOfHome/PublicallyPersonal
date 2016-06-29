@@ -3,7 +3,7 @@
 	<div class="spacer" class="spacer"></div>
 	<h1>Welcome! <span>Andrew Tsai here.</span></h1>
 	<h2>What would you like to know?</h2>
-	<table scroll id="navbar" ng-class="{stuckToTop:navbarStuck}">
+	<table sticky id="navbar" ng-class="{stuckToTop:navbarStuck}">
 		<tr>
 			<td ng-click = "goToSection('aboutMe')">
 				About Me
@@ -39,10 +39,11 @@
 			<div ng-repeat="likeType in likeTypes">
 				{{likeType.name}}
 				<slick class="slider" accessibility=false dots=false arrows=false slides-to-show=3 slides-to-scroll=1 
-					autoplay=true autoplay-speed=0 speed=10000 css-ease='linear' 
-					center-mode=true>
+					autoplay=true autoplay-speed=0 speed=10000 css-ease='linear' draggable=false 
+					center-mode=true variable-width=true pause-on-hover=false>
 					<div ng-repeat="like in likeType.likes">
 						{{like.name}}
+						<img ng-src='./_client/images/likes/{{like.img}}' like-img-style/>
 					</div>
 				</slick>
 			</div>

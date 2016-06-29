@@ -9,7 +9,8 @@ var app = angular.module("app",[
 	'smoothScroll',
 	'ngCookies',
 	'formly',
-	'formlyBootstrap'
+	'formlyBootstrap',
+	'likeImgStyle'
 ]);
 
 
