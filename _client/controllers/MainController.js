@@ -31,8 +31,8 @@ app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cooki
 				'Wrote SQL queries, checked database definitions, and examined query plans for stored procedures' + 
 					' to troubleshoot and resolve customer issues with ETL and data integrity',
 				'Designed and developed software and their associated QA tests and test cases. Among these software projects' +
-					'included the automating mapping table generation, tables which translated between Epic\'s hierarchical' +
-					'database and SQL relational databases.',
+					' included the automating mapping table generation, tables which translated between Epic\'s hierarchical' +
+					' database and SQL relational databases.',
 				'Adhered to standards used in Electronic Health Records and the Health industry, e.g. HIPAA.'
 			]
 		},{
@@ -55,8 +55,10 @@ app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cooki
 			endDate: 'Aug 2014',
 			info: [
 				'Wrote a PHP redirect for a high-priority customer to eliminate a critical bug that corrupted request content.',
-				'Created tables and views, and the stored procedures and scheduled jobs that manage them, in order to monitor message metrics over a 20-day period.',
-				'Performed in-depth refactoring and updating of old, "legacy" code to follow Object-Oriented design principles rather than Procedural patterns.',
+				'Created tables and views, and the stored procedures and scheduled jobs that manage them, in order to monitor' +
+					' message metrics over a 20-day period.',
+				'Performed in-depth refactoring and updating of old, "legacy" code to follow Object-Oriented design principles' + 
+					' rather than Procedural patterns.',
 				'Created and edited new Database Access Objects (DAOs) and service classes using hibernate.'
 			]
 		},{
@@ -67,9 +69,9 @@ app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cooki
 			info: [
 				'Tutored students 1-on-1 in various Computing subjects and classes',
 				'Reviewed and/or re-taught students of varying years and skill levels computing concepts ranging from basic coding' + 
-					'to data structures to CPU datapaths.',
+					' to data structures to CPU datapaths.',
 				'Assisted students with homework problems by explaining and/or elaborating upon the instructions and by providing' +
-					'students with tools and or methods to solve and debug their code.'
+					' students with tools and or methods to solve and debug their code.'
 			]
 		}];
 

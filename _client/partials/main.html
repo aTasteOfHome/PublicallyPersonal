@@ -15,7 +15,7 @@
 				</div>
 			</td>
 			<td ng-click="goToSection('home')">
-				<img src=""/>
+				<img src="./_client/images/Very-Basic-Home-Filled-icon.png" style='height: 36px; display: block; margin: 0 auto;'/>
 			</td>
 			<td ng-click="goToSection('linksAndContact')">
 				Links and Downloads
@@ -33,21 +33,22 @@
 	<!--about me-->
 	<tr>
 		<td class="aboutMeSide">
-			<!--likes + dislikes, or "Here are a few of my favorite things"
-				a.k.a. left panel-->
-			<h3>What do I like?</h3>
-			<div ng-repeat="likeType in likeTypes">
-				{{likeType.name}}
-				<slick class="slider" accessibility=false dots=false arrows=false slides-to-show=3 slides-to-scroll=1 
-					autoplay=true autoplay-speed=0 speed=10000 css-ease='linear' draggable=false 
-					center-mode=true variable-width=true pause-on-hover=false>
-					<div ng-repeat="like in likeType.likes">
-						{{like.name}}
-						<img ng-src='./_client/images/likes/{{like.img}}' like-img-style/>
-					</div>
-				</slick>
-			</div>
-		</td> <!--center panel-->
+			<!--skills bar graph-->
+			<h3>What skills do I have?</h3>
+			<table id="skillsTable">
+				<tr>
+					<td colspan="3"></td>
+					<td ng-repeat="val in skillVals">{{val}}</td>
+				</tr>
+				<tr ng-repeat="skill in skills">
+					<td colspan="3">
+						{{skill.name}}
+					</td>
+					<td colspan="{{skill.skillLevel}}"></td>
+				</tr>
+			</table>
+		</td> 
+		<!--center panel-->
 		<td class="aboutMeCenter">
 			<img src=""/> <!--picture of me-->
 			<h3>What's My Story</h3>
@@ -66,7 +67,7 @@
 				After a while, though, I noticed lights from the houses on the other side of the lake, and I thought of how much they looked like the stars I would watch through my telescope. I thought about how each one had its own Andrews and Andreas, Moms and Dads. Some stars were big, with many lights, and others small; Some were bright and happy, some tired and dim. Some were close, and yet others were far, far, away. But every star had a story to tell: all I had to do was watch, and listen.
 			</p>
 			<p>
-				And so I did. I've befriended a man who's become a legend in the small city he calls home, making a living off the street by playing music for passersby the past 30 years. I've talked with a cabbie from Syria, who told me of how his brothers found themselves on either side of the battlefield, one as a freedom fighter, and the other as conscript of Asaad. I've had dinner with a self-described "Sex Positive Feminist with a capital S-P-F" whose passion for human rights is matched only by her love of the finer points of Markov chain implementations. And, a long time ago, I took lessons from a music teacher who kept a picture of her family, long gone, on a nightstand next to the piano. In time, should you choose to contact me, I will tell you of how I resolved server downtimes through daily meetings and agenda updates, of how I took the initiative to teach myself modern web development frameworks and languages to build this website, and other stories filled with pertinent, career-related jargon. I do have a job to do, and I intend to do it well. But for now, I'd like you to take a deep breath and look at the points of light sitting around you, each with a story of their own. And one day, should you choose to take me in, I'd like to hear yours.
+				And so I did. I've befriended a man who's become a legend in the small city he calls home, making a living off the street by playing music for passersby the past 30 years. I've talked with a cabbie from Syria, who told me of how his brothers found themselves on either side of the battlefield, one as a freedom fighter, and the other as a conscript of Asaad. I've had dinner with a self-described "Sex Positive Feminist with a capital S-P-F" whose passion for human rights is matched only by her love of the finer points of Markov chain implementations. And, a long time ago, I took lessons from a music teacher who kept a picture of her family, long gone, on a nightstand next to the piano. In time, should you choose to contact me, I will tell you of how I resolved server downtimes through daily meetings and agenda updates, of how I took the initiative to teach myself modern web development frameworks and languages to build this website, and other stories filled with pertinent, career-related jargon. I do have a job to do, and I intend to do it well. But for now, I'd like you to take a deep breath and look at the points of light sitting around you, each with a story of their own. And one day, should you choose to take me in, I'd like to hear yours.
 			</p>
 			<br>
 			<p>
@@ -76,20 +77,19 @@
 			</p>
 		</td>
 		<td class="aboutMeSide"> <!--right panel-->
-			<!--skills bar graph-->
-			<h3>What skills do I have?</h3>
-			<table id="skillsTable">
-				<tr>
-					<td colspan="3"></td>
-					<td ng-repeat="val in skillVals">{{val}}</td>
-				</tr>
-				<tr ng-repeat="skill in skills">
-					<td colspan="3">
-						{{skill.name}}
-					</td>
-					<td colspan="{{skill.skillLevel}}"></td>
-				</tr>
-			</table>
+			<!--likes + dislikes, or "Here are a few of my favorite things"
+				a.k.a. left panel-->
+			<h3>What do I like?</h3>
+			<div ng-repeat="likeType in likeTypes">
+				{{likeType.name}}
+				<slick class="slider" accessibility=false dots=false arrows=false slides-to-scroll=1 
+					autoplay=true autoplay-speed=0 speed=10000 css-ease='linear' draggable=false 
+					center-mode=true variable-width=true pause-on-hover=false>
+					<div ng-repeat="like in likeType.likes" style='border-width:0;'>
+						<img ng-src='./_client/images/likes/{{like.img}}' like-img-style/>
+					</div>
+				</slick>
+			</div>
 		</td>
 	</tr>
 </table>
@@ -106,7 +106,7 @@
 </div>
 <table id="linksAndContact" class="container" ng-controller='ContactFormController as cfc'>
 	<tr>
-	<td>
+	<td id='linksAndDownloads'>
 		<h2>Links & Downloads</h2>
 		<!--resume + links-->
 		<!--resume pop-up-->

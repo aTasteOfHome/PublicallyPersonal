@@ -70,6 +70,22 @@ table {
 	padding: 0
 }
 
+#contactFormly div{
+	border-style:none;
+	border-width: 0;
+	padding: 0;
+}
+
+#linksAndDownloads a{
+	display: inline-block;
+	margin:0 auto;
+}
+
+#linksAndDownloads img{
+	display: inline-block;
+	margin:0 auto;
+}
+
 .stuckToTop {
 	position: fixed;
 	left:0;
@@ -96,8 +112,3 @@ table {
     box-shadow: 0 2px 2px 1px rgba(0,0,0,0.2);
 }
 
-#contactFormly div{
-	border-style:none;
-	border-width: 0;
-	padding: 0;
-}

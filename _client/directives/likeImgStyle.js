@@ -5,9 +5,7 @@ mod.directive("likeImgStyle", function($window){
 	     restrict: 'A',
 	     link: function(scope, elem, attr) {
 	     	angular.element(document).ready(function(){
-	     		elem.parent().css('height','220px');
-
-	     		elem.css('height','100px');
+	     		elem.css('height','6.0em');
      		});
 
      		elem.on('load',function() {
@@ -15,15 +13,15 @@ mod.directive("likeImgStyle", function($window){
 	                height = elem.height();
 	            //check width and height and apply styling to parent here.
 	            if(!height || !width){
-	            	elem.css('height','120px');
+	            	elem.css('height','9.0em');
 	            }else if(height >= width*2){
-	            	elem.css('height','200px');
+	            	elem.css('height','15.0em');
 	            }else if(height >= width/1.5){
-	            	elem.css('height',Math.floor(200-(width/height-0.5)*80) + 'px');
+	            	elem.css('height',Math.floor(15.0-(width/height-0.5)*6.0) + 'em');
 	            }else if(height >= width/2){
-	            	elem.css('height', Math.floor(120-(width/height-1.5)*60) + 'px');
+	            	elem.css('height', Math.floor(9.0-(width/height-1.5)*4.5) + 'em');
 	            }else{
-	            	elem.css('height','90px');
+	            	elem.css('height','6.75em');
 	            }
      		});
      	}
