@@ -2,17 +2,7 @@
 Personal website that will hold work-related information and achievements.
 __________________
 
-To run: be sure you have these installed:
-
-Node.js
-
-npm
-
-Git
-
-__________________
-
-Then:
+To run:
 
 1. Check to see you have these programs installed:
 	Node.js
