@@ -90,6 +90,10 @@ table {
 	margin:0;
 }
 
+#home > h1 {
+	vertical-align: middle;
+}
+
 
 #linksAndContact{
 	padding:0;
