@@ -5,8 +5,11 @@ __________________
 To run:
 
 1. Check to see you have these programs installed:
+
 	Node.js
+
 	npm
+	
 	Git
 
 2. git clone https://github.com/aTasteOfHome/PublicallyPersonal.git
