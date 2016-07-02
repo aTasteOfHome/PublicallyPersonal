@@ -1,11 +1,20 @@
 # PublicallyPersonal
 Personal website that will hold work-related information and achievements.
 
+__________________
+
+
 Check out the current version at: 
 
 https://andrewtsai-publicallypersonal.herokuapp.com
 
 __________________
+
+
+WARNING: may not be compatible on browsers other than Google Chrome. Cross-browser compatibility to be implemented in the future.
+
+__________________
+
 
 To run:
 
