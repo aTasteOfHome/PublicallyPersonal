@@ -56,6 +56,11 @@ table {
 	width: 25%;
 }
 
+.navbarButton:hover {
+	background-color: rgb(100,180,180) !important;
+	cursor: pointer;
+}
+
 #navbar {
 	padding: 0;
 	margin:0;
