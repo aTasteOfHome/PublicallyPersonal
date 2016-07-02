@@ -1,28 +1,36 @@
 <div id = "home">
 	<!--home-->
 	<div class="spacer" class="spacer"></div>
-	<h1>Welcome! <span>Andrew Tsai here.</span></h1>
-	<h2>What would you like to know?</h2>
-	<table sticky id="navbar" ng-class="{stuckToTop:navbarStuck}">
-		<tr>
-			<td ng-click = "goToSection('aboutMe')">
-				About Me
-			</td>
-			<td ng-click="goToSection('workExp')">
-				<!--dropdown-->
-				My Work
-			</td>
-			<td ng-click="goToSection('home')">
-				<img src="./_client/images/Very-Basic-Home-Filled-icon.png" style='height: 36px; display: block; margin: 0 auto;'/>
-			</td>
-			<td ng-click="goToSection('linksAndContact')">
-				Links and Downloads
-			</td>
-			<td ng-click="goToSection('linksAndContact')">
-				Contact Me
-			</td>
-		</tr>
-	</table>
+	<div style='
+		border-width:0;
+		margin:0;
+		padding:0;
+		position: relative;
+  		top: 15%;
+	'>
+		<h1>Welcome! <span>Andrew Tsai here.</span></h1>
+		<h2>What would you like to know?</h2>
+		<table sticky id="navbar" ng-class="{stuckToTop:navbarStuck}">
+			<tr>
+				<td ng-click = "goToSection('aboutMe')">
+					About Me
+				</td>
+				<td ng-click="goToSection('workExp')">
+					<!--dropdown-->
+					My Work
+				</td>
+				<td ng-click="goToSection('home')">
+					<img src="./_client/images/Very-Basic-Home-Filled-icon.png" style='height: 36px; display: block; margin: 0 auto;'/>
+				</td>
+				<td ng-click="goToSection('linksAndContact')">
+					Links and Downloads
+				</td>
+				<td ng-click="goToSection('linksAndContact')">
+					Contact Me
+				</td>
+			</tr>
+		</table>
+	</div>
 </div>
 <table id = "aboutMe" class="container">
 	<th colspan="3">
