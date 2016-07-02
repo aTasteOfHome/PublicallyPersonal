@@ -1,5 +1,10 @@
 # PublicallyPersonal
 Personal website that will hold work-related information and achievements.
+
+Check out the current version at: 
+
+https://andrewtsai-publicallypersonal.herokuapp.com
+
 __________________
 
 To run:
