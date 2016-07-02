@@ -49,27 +49,41 @@ table {
 	width:90%;
 }
 
+.navbarSpacer {
+	border-width:0;
+	margin:0;
+	padding:0;
+	width: 25%;
+}
+
 #navbar {
 	padding: 0;
 	margin:0;
-	background-color: white;
 	border-top-width: thin;
 	border-bottom-width: thin;
 	border-left-width: 0;
 	border-right-width: 0;
+	border-color: rgba(0,0,0,0);
+	font-size: 1.5em;
 }
 
 #navbar td {
-	width:20%;
 	margin-top: 0;
 	margin-bottom: 0;
 	text-align: center;
+	border-color: rgba(0,0,0,0);
 }
 
 #navbar tr {
 	margin:0;
 	padding:0;
 	border-style:none;
+}
+#navbarHomeButton {
+    width: 0%;
+}
+#navbarHomeButton img {
+    opacity: 0;
 }
 
 #skillsTable{

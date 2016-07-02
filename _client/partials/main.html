@@ -10,24 +10,26 @@
 	'>
 		<h1>Welcome! <span>Andrew Tsai here.</span></h1>
 		<h2>What would you like to know?</h2>
-		<table sticky id="navbar" ng-class="{stuckToTop:navbarStuck}">
+		<table id="navbar" ng-class="{stuckToTop:navbarStuck}" navbar-scroll-style>
 			<tr>
-				<td ng-click = "goToSection('aboutMe')">
+				<td class='navbarSpacer'></td>
+				<td class='navbarButton' ng-click = "goToSection('aboutMe')">
 					About Me
 				</td>
-				<td ng-click="goToSection('workExp')">
+				<td class='navbarButton' ng-click="goToSection('workExp')">
 					<!--dropdown-->
 					My Work
 				</td>
-				<td ng-click="goToSection('home')">
+				<td id='navbarHomeButton' class='navbarButton' ng-click="goToSection('home')">
 					<img src="./_client/images/Very-Basic-Home-Filled-icon.png" style='height: 36px; display: block; margin: 0 auto;'/>
 				</td>
-				<td ng-click="goToSection('linksAndContact')">
-					Links and Downloads
+				<td class='navbarButton' ng-click="goToSection('linksAndContact')">
+					Links
 				</td>
-				<td ng-click="goToSection('linksAndContact')">
+				<td class='navbarButton' ng-click="goToSection('linksAndContact')">
 					Contact Me
 				</td>
+				<td class='navbarSpacer'></td>
 			</tr>
 		</table>
 	</div>

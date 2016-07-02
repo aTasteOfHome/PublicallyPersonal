@@ -2,15 +2,21 @@
 
 //initialize with dependencies
 var app = angular.module("app",[
+	//downloaded dependencies
 	'ui.router',
-	'mySticky',
-	'MainController',
 	'slick',
 	'smoothScroll',
 	'ngCookies',
 	'formly',
 	'formlyBootstrap',
-	'likeImgStyle'
+
+	//controllers
+	'MainController',
+	'ContactFormController',
+
+	//directives
+	'likeImgStyle',
+	'navbarScrollStyle'
 ]);
 
 
