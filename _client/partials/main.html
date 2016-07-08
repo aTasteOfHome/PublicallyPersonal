@@ -8,9 +8,10 @@
 		position: relative;
   		top: 15%;
 	'>
-		<h1 ng-init='pageLoaded = true' class='fade' ng-class='{in:pageLoaded}'>Welcome! <span>Andrew Tsai here.</span></h1>
+		<h1><span ng-init='pageLoaded = true' class='fade' ng-class='{in:pageLoaded}'>Welcome! </span>
+			<span ng-init='pageLoaded = true' class='fade' ng-class='{in:pageLoaded}'>Andrew Tsai here.</span></h1>
 		<h2 ng-init='pageLoaded = true' class='fade' ng-class='{in:pageLoaded}'>What would you like to know?</h2>
-		<table id="navbar" ng-class="{stuckToTop:navbarStuck}" navbar-scroll-style>
+		<table id="navbar" ng-init='pageLoaded = true' class='fade' ng-class="{stuckToTop:navbarStuck, in:pageLoaded}" navbar-scroll-style>
 			<tr>
 				<td class='navbarSpacer'></td>
 				<td class='navbarButton' ng-click = "goToSection('aboutMe')">
@@ -115,20 +116,22 @@
 <table id="linksAndContact" class="container" ng-controller='ContactFormController as cfc'>
 	<tr>
 	<td id='linksAndDownloads'>
-		<h2>Links & Downloads</h2>
+		<h2>Links</h2>
 		<!--resume + links-->
 		<!--resume pop-up-->
 		<table>
 			<tr>
+			<!--
 			<td>
 				<a href="">
-					<!--resume DL link-->
+					resume DL link
 					<div>
 						Resume
 						<img src="_client/images/download-arrow.png"/>
 					</div>
 				</a>
 			</td>
+			-->
 			<td>
 				<a href="https://www.linkedin.com/in/andrew-tsai-15890b26" target="_blank">
 					<!--Linkedin-->
