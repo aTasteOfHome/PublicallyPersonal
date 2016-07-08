@@ -61,13 +61,16 @@ app.controller('ContactFormController',['$scope', '$http', function($scope, $htt
 			.success(function(data,status,headers,config){
 				//when response is available, show that message was sent
 				console.log(data);
-
+				console.log('httpSuccess');
 				//show success box
+
+				alert(data.message);
 			})
 			.error(function(data,status,headers,config){
 				//when response is available, show that message was sent
 				console.log(data);
-
+				console.log('error');
+				alert('Connection failed; server did not receive or failed to process request to send message.');
 				//show error box
 			});
 
