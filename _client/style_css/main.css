@@ -61,6 +61,10 @@ table {
 	cursor: pointer;
 }
 
+.bigbox {
+	width:60%;
+}
+
 #navbar {
 	padding: 0;
 	margin:0;
