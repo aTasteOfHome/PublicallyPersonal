@@ -19,6 +19,7 @@ app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cooki
 		}
 
 		//add all scope data
+		//TODO: http request to data files
 		$scope.jobs=[{
 			workplace: 'Epic Systems Corporation',
 			position: 'Technical Services - Reporting Systems',
@@ -245,7 +246,7 @@ app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cooki
 				name: 'Kid Cudi',
 				img: 'KidCudi.jpg'
 			}]
-		}]
+		}];
 
 		//perform on load
 		var loc=$cookies.get('Tsai_Resume_Site_ScrollY');
