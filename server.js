@@ -4,6 +4,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
+/**
+ * setup database
+ */
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://basic:basic@ds027175.mlab.com:27175/heroku_mfg4kvt2');
+
 
 /**
 * Express.js setup
