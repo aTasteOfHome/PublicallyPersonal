@@ -14,6 +14,11 @@ var app = angular.module("app",[
 	'MainController',
 	'ContactFormController',
 
+	//services
+	'workDataService',
+	'aboutMeDataService',
+	'staticDataService',
+
 	//directives
 	'likeImgStyle',
 	'navbarScrollStyle'
