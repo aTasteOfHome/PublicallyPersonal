@@ -103,12 +103,21 @@
 	</tr>
 </table>
 <div id="workExp" class="container bigbox">
-	<h2>Work and Projects</h2>
+	<h2>My Work</h2>
 	<!--work and experiences-->
 	<div ng-repeat = "job in jobs">
 		<h4>{{job.workplace}}{{job.position ? ' | ':''}}{{job.position}}</h4>
 		<h5>{{job.startDate}} - {{job.endDate}}</h5>
 		<ul ng-repeat = "info in job.info">
+			<li>{{info}}</li>
+		</ul>
+	</div>
+	<br/>
+	<h2>My Projects</h2>
+	<div ng-repeat = "project in projects">
+		<h4>{{project.name}}{{project.description ? ' | ':''}}<span style="font-style: oblique">{{project.description}}</span></h4>
+		<h5>{{project.startDate}} - {{project.endDate ? project.endDate:'Present'}}</h5>
+		<ul ng-repeat = "info in project.info">
 			<li>{{info}}</li>
 		</ul>
 	</div>

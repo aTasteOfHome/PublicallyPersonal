@@ -8,28 +8,16 @@ workDataService.service('$workDataService', function(){
 			startDate: 'June 1, 2015',
 			endDate: 'April 22, 2016',
 			info: [
-				'Managed systems and database upgrades across multiple hospitals and organizations',
-				'Remodeled the "Epic Quarterly Update", a quarterly process that gives customer executives' +
-					' important information on their organization\'s current status.',
-				'Wrote SQL queries, checked database definitions, and examined query plans for stored procedures' + 
-					' to troubleshoot and resolve customer issues with ETL and data integrity',
-				'Designed and developed software and their associated QA tests and test cases. Among these software projects' +
-					' included the automating mapping table generation, tables which translated between Epic\'s hierarchical' +
-					' database and SQL relational databases.',
-				'Adhered to standards used in Electronic Health Records and the Health industry, e.g. HIPAA.'
-			]
-		},{
-			workplace: 'Collegiate Cribs',
-			position:  'Co-creator / Front-end Developer',
-			startDate: 'Aug 2014',
-			endDate: 'May 2015',
-			info: [
-				'Used the  MEAN stack, especially Angular, in conjunction with Polymer, jQuery and other Javascript/HTML/CSS tools to create our website.',
-				'Drafted and finalized technical documentation, including Status Reports, the Statement of Work, and the Feasibility Report.',
-				'Designed mockups of the entire website, including subpages, with an eye towards usability and user-friendly interface design.',
-				'Prepared and performed a presentation of all of our work and research, in conjunction with a walkthrough of our mockups.',
-				'Set up and managed a Git repository structure, and oversaw all merges and code reviews.'
-
+				"Debugged and troubleshot issues with SAP Crystal reports, SSAS Cubes, and Microsoft SQL Server databases " + 
+					"with the help of T-SQL, as well as knowledge of data warehouse structures and the STAR schema.",
+				"Designed, developed, and created QA test cases for system upgrade automation software.",
+				"Gathered system requirements and staffing needs to design and/or suggest  bug fixes, feature updates, and configuration changes" + 
+					" to best benefit the customer, along with feedback to improve all of the above.",
+				"Maintained and updated internal documentation as part of Epic’s documentation team.",
+				"Kept up to date with various departments across Epic, and with sister technologies we integrated with, to ensure that " +
+					"documentation was current with the latest developments.",
+				"Communicated with customers and performed project management tasks during stressful situations, such as system upgrades and server downtimes.",
+				"Trained customers and provided feedback to users for how best to improve their use of Epic applications."
 			]
 		},{
 			workplace: 'mGage',
@@ -42,7 +30,9 @@ workDataService.service('$workDataService', function(){
 					' message metrics over a 20-day period.',
 				'Performed in-depth refactoring and updating of old, "legacy" code to follow Object-Oriented design principles' + 
 					' rather than Procedural patterns.',
-				'Created and edited new Database Access Objects (DAOs) and service classes using hibernate.'
+				'Created and edited new Database Access Objects (DAOs) and service classes using hibernate.',
+				"Helped develop part of an API that would take in and return information between systems and customers with the " + 
+					"use of the Spring framework, and its custom serialization/deserialization capabilities."
 			]
 		},{
 			workplace: 'Georgia Institute of Technology',
@@ -50,12 +40,37 @@ workDataService.service('$workDataService', function(){
 			startDate: 'February 2014',
 			endDate: 'May 2014',
 			info: [
-				'Tutored students 1-on-1 in various Computing subjects and classes',
-				'Reviewed and/or re-taught students of varying years and skill levels computing concepts ranging from basic coding' + 
-					' to data structures to CPU datapaths.',
+				'Tutored freshmen, sophomores, and juniors in a wide array of computing concepts, such as basic conditionals, data structures, ' + 
+					'time and memory complexity, and Object-Oriented Programming (OOP) concepts.',
 				'Assisted students with homework problems by explaining and/or elaborating upon the instructions and by providing' +
 					' students with tools and or methods to solve and debug their code.'
 			]
 		}];
-	}
-})
+
+		$scope.projects=[{
+			name: 'Publically Personal',
+			description: 'Personal website to hold information on past work and achievements',
+			startDate: 'April 2016',
+			info: [
+				"Website url: http://andrewtsai-publicallypersonal.herokuapp.com",
+				"Built on the MEAN stack (MongoDB, Express, Angular.js, Node.js).",
+				"Dynamic, single-page application.",
+				"Made use of bower and npm to manage project dependencies.",
+				"Deployed on Heroku",
+				"Used Git for version control."
+			]
+		},{
+			name: 'Collegiate Cribs',
+			description:  'Senior Project: Yelp for collegiate housing ',
+			startDate: 'Aug 2014',
+			endDate: 'May 2015',
+			info: [
+				'Made extensive use of the MEAN stack, especially Angular, in conjunction with Polymer and other Javascript tools to create our team’s website.',
+				'Drafted and finalized technical documentation, including Status Reports, the Statement of Work, and the Feasibility Report.',
+				'Designed mockups of the entire website, including subpages, with an eye towards usability and user-friendly interface design.',
+				'Prepared and performed a presentation of all of our work and research, in conjunction with a walkthrough of our mockups.',
+				'Set up and managed a Git repository structure, and oversaw all merges and code reviews.'
+			]
+		}];
+	};
+});
