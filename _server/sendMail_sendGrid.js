@@ -54,7 +54,8 @@ exports.sendMail= function(req, res) {
         if(error){
           res.json({
             Status: false,
-            message: 'Send failed; unable to establish contact with website owner\'s mailing address, ' + process.env.PERSONAL_EMAIL
+            message: 'Send failed; unable to establish contact with website owner\'s mailing address, ' + process.env.PERSONAL_EMAIL,
+            data: error
           });
         }else{
           res.json({

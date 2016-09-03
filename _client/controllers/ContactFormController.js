@@ -62,6 +62,10 @@ app.controller('ContactFormController',['$scope', '$http', function($scope, $htt
 				//when response is available, show that message was sent
 				console.log(data);
 				console.log('httpSuccess');
+
+				//show error information
+				console.log(data.data);
+
 				//show success box
 
 				alert(data.message);
