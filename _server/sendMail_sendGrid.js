@@ -19,7 +19,7 @@ exports.sendMail= function(req, res) {
     content: new helper.Content('text/plain', 'Hi ' + data.contactName + ', \n\n' +
       'Thank you for checking out my website, "andrewtsai-publicallypersonal.herokuapp.com"! Feel free to check out my linkedin, or if ' +
       'you are more musically inclined, my musician page at "www.facebook.com/Tsaiguymusic". \n\n' +
-      'Have a good one, \nAndrew Tsai' +
+      'Have a good one, \n\n\nAndrew Tsai' +
       '\n\n= = Copy of message sent = = \n\n\n' + data.contactMsg)
   }
   var pingMail = new helper.Mail(pingMailOptions.from, pingMailOptions.subject, pingMailOptions.to, pingMailOptions.content);
