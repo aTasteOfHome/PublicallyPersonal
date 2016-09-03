@@ -44,8 +44,12 @@ exports.sendMail= function(req, res) {
     if(error){
       res.json({
         Status: false,
-        message: 'Send failed; unable to connect to ' + process.env.PERSONAL_EMAIL,
-        data: error
+        message: 'Send failed; unable to connect to ' + data.contactEmail
+        data: {
+          status: response.statusCode,
+          body: response.body,
+          headers: response.headers
+        }
       });
     }else{
       sg.API(request, function(error, response) {
