@@ -44,7 +44,7 @@ exports.sendMail= function(req, res) {
     if(error){
       res.json({
         Status: false,
-        message: 'Send failed; unable to connect to ' + data.contactEmail,
+        message: 'Send failed; unable to connect to ' + process.env.PERSONAL_EMAIL,
         data: error
       });
     }else{
