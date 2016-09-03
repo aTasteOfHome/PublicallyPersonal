@@ -57,7 +57,7 @@ app.controller('ContactFormController',['$scope', '$http', function($scope, $htt
 		console.log(data.contactEmail);
 		console.log(data.contactMsg);
 
-		$http.post('./sendMail',data)
+		$http.post('./sendMail_sendGrid',data)
 			.success(function(data,status,headers,config){
 				//when response is available, show that message was sent
 				console.log(data);

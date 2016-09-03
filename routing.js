@@ -1,7 +1,8 @@
 /**
 * Dependencies
 */
-var mailer=require('./_server/sendMail.js')
+var mailer=require('./_server/sendMail.js');
+var sendgridMailer=require('./_server/sendMail_sendGrid.js');
 var express = require('express');
 var router= express();
 
@@ -21,6 +22,7 @@ module.exports = function(){
     });
 
     router.route('/sendMail').post(mailer.sendMail);
+    router.route('/sendMail_sendGrid').post(sendgridMailer.sendMail);
 
     return router;
 };

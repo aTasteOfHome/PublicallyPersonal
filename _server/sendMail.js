@@ -5,7 +5,7 @@ var transporter = nodemailer.createTransport();
 
 exports.sendMail = function(req, res){
 	var data = req.body;
-	var andrewEmail='andrewtsai1994@gmail.com'
+	var andrewEmail=process.env.PERSONAL_EMAIL
 
 	var mailOptions = {
 		from: data.contactEmail,
