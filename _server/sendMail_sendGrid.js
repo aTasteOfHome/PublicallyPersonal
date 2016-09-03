@@ -8,7 +8,7 @@ exports.sendMail= function(req, res) {
     from: new helper.Email(data.contactEmail),
     to: new helper.Email(process.env.PERSONAL_EMAIL),
     subject: 'Website message from ' + data.contactName,
-    content: new helper.Content('text/plain', data.contactMsg)
+    content: new helper.Content('application/json', data.contactMsg)
   }
   var mail = new helper.Mail(mailOptions.from, mailOptions.subject, mailOptions.to, mailOptions.content);
 
@@ -16,13 +16,13 @@ exports.sendMail= function(req, res) {
     from: new helper.Email('noreply@andrewtsai-publicallypersonal.herokuapp.com'),
     to: new helper.Email(data.contactEmail),
     subject: 'Thank you for contacting me!',
-    contact: new helper.Content('text/plain', 'Hi ' + data.contactName + ', \n\n' +
+    content: new helper.Content('application/json', 'Hi ' + data.contactName + ', \n\n' +
       'Thank you for checking out my website, "andrewtsai-publicallypersonal.herokuapp.com"! Feel free to check out my linkedin, or if ' +
       'you are more musically inclined, my musician page at "www.facebook.com/Tsaiguymusic". \n\n' +
       'Have a good one, \nAndrew Tsai' +
       '\n\n= = Copy of message sent = = \n\n\n' + data.contactMsg)
   }
-  var pingMail = new helper.Mail(pingMailOptions.from, pingMailOptions.subject, pingMailOptions.to, pingMailOptions.text);
+  var pingMail = new helper.Mail(pingMailOptions.from, pingMailOptions.subject, pingMailOptions.to, pingMailOptions.content);
 
   var request = sg.emptyRequest({
     method: 'POST',
