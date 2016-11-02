@@ -26,7 +26,8 @@
     "sendgrid": "^4.0.2"
   },
   "devDependencies": {
-    "node-sass": "^3.7.0",
-    "git": "^0.1.5"
+    "git": "^0.1.5",
+    "jasmine": "^2.5.2",
+    "node-sass": "^3.7.0"
   }
 }
