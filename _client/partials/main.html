@@ -15,20 +15,20 @@
 		<table id="navbar" ng-init='pageLoaded = true' class='fade' ng-class="{stuckToTop:navbarStuck, in:pageLoaded}" navbar-scroll-style>
 			<tr>
 				<td class='navbarSpacer'></td>
-				<td class='navbarButton' ng-click = "goToSection('aboutMe')">
+				<td class='navbarButton' ng-click = "vmMainCtrl.goToSection('aboutMe')">
 					About Me
 				</td>
-				<td class='navbarButton' ng-click="goToSection('workExp')">
+				<td class='navbarButton' ng-click="vmMainCtrl.goToSection('workExp')">
 					<!--dropdown-->
 					My Work
 				</td>
-				<td id='navbarHomeButton' class='navbarButton' ng-click="goToSection('home')">
+				<td id='navbarHomeButton' class='navbarButton' ng-click="vmMainCtrl.goToSection('home')">
 					<img src="./_client/images/Very-Basic-Home-Filled-icon.png" style='height: 36px; display: block; margin: 0 auto;'/>
 				</td>
-				<td class='navbarButton' ng-click="goToSection('linksAndContact')">
+				<td class='navbarButton' ng-click="vmMainCtrl.goToSection('linksAndContact')">
 					Links
 				</td>
-				<td class='navbarButton' ng-click="goToSection('linksAndContact')">
+				<td class='navbarButton' ng-click="vmMainCtrl.goToSection('linksAndContact')">
 					Contact Me
 				</td>
 				<td class='navbarSpacer'></td>

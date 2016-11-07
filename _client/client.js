@@ -32,7 +32,8 @@ app.config(['$stateProvider', '$urlRouterProvider',
         $stateProvider.state('main',{
         	url: "/",
         	templateUrl: '/_client/partials/main.html',
-        	controller: 'MainController'
+        	controller: 'MainController',
+        	controllerAs: 'vmMainCtrl'
         });
 	}
 ]);

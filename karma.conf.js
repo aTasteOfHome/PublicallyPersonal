@@ -47,6 +47,7 @@ module.exports = function(config) {
     files: [
         'bower_components/angular/angular.min.js',
         'bower_components/angular-ui-router/release/angular-ui-router.min.js',
+        'node_modules/angular-mocks/*.js',
         '_client/**/*.js',
        '**/*.spec.js'
     ],
@@ -62,6 +63,7 @@ module.exports = function(config) {
     preprocessors: {
          'bower_components/angular/angular.min.js': [ 'browserify' ],
         'bower_components/angular-ui-router/release/angular-ui-router.min.js': [ 'browserify' ],
+        'node_modules/angular-mocks/*.js': ['browserify'],
         '_client/**/*.js': [ 'browserify' ],
         '**/*.spec.js': [ 'browserify' ]
 

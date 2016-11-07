@@ -4,8 +4,8 @@
   "description": "Andrew Tsai's personal website",
   "scripts": {
     "start": "node driver/start.js",
-    "build-css": "node-sass --include-path scss _client/style_sass/main.scss _client/style_css/main.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-sass": "node-sass --include-path scss _client/style_sass/main.scss _client/style_css/main.css",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",

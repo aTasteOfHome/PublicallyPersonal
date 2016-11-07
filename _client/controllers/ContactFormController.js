@@ -8,13 +8,16 @@ app.run(function(formlyConfig, formlyValidationMessages, formlyApiCheck){
 });
 
 app.controller('ContactFormController',['$scope', '$http', function($scope, $http){
+	
 	var cfc=this;
 
 	//model object referenced in the form
 	cfc.contact = {};
+	cfc.contactFields = contactFields;
+	cfc.sendMail = sendMail;
 
 	//array of form fields with configuration and options set.
-	cfc.contactFields = [{
+	var contactFields = [{
 			key: 'contactName',
 			type: 'input',
 			templateOptions: {
@@ -49,7 +52,7 @@ app.controller('ContactFormController',['$scope', '$http', function($scope, $htt
 		}
 	];
 
-	cfc.sendMail = function(){
+	function sendMail(){
 		var data = cfc.contact;
 
 		console.log(data);
@@ -77,6 +80,5 @@ app.controller('ContactFormController',['$scope', '$http', function($scope, $htt
 				alert('Connection failed; server did not receive or failed to process request to send message.');
 				//show error box
 			});
-
 	};
 }]);

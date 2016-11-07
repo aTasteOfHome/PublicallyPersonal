@@ -3,8 +3,37 @@ var app = angular.module("MainController", []);
 app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cookies', '$window', '$staticDataService',
 	function($scope, $location, smoothScroll, $cookies, $window, $staticDataService){
 
+		var vmMainCtrl = this;
+
+		vmMainCtrl.goToSection=goToSection;
+
+		init();
+
+		function init(){
+			//listener for refresh
+			$window.onbeforeunload = function(e){
+				$cookies.put('Tsai_Resume_Site_ScrollY',$window.scrollY);
+			}
+
+			//load data into scope
+			$staticDataService.populate($scope);
+
+			//restore previous scroll position
+			var loc=$cookies.get('Tsai_Resume_Site_ScrollY');
+			if(typeof loc === 'string'){
+				smoothScroll('main', {
+					offset: (function(){
+						return -1*loc;
+					})()
+				});
+			}
+
+			//clean cookies
+			$cookies.remove('Tsai_Resume_Site_ScrollY');
+		}
+
 		//navbar functions
-		$scope.goToSection = function(sectionId) {
+		function goToSection(sectionId) {
 			var element = document.getElementById(sectionId);
 			var options = {};
 			if(sectionId != 'home'){
@@ -13,28 +42,6 @@ app.controller('MainController', ['$scope', '$location', 'smoothScroll', '$cooki
 			smoothScroll(element,options);
 		};
 
-		//listener for refresh
-		$window.onbeforeunload = function(e){
-			$cookies.put('Tsai_Resume_Site_ScrollY',$window.scrollY);
-		}
-
 		
-//==== perform on load ====
-
-		//load data into scope
-		$staticDataService.populate($scope);
-
-		//restore previous scroll position
-		var loc=$cookies.get('Tsai_Resume_Site_ScrollY');
-		if(typeof loc === 'string'){
-			smoothScroll('main', {
-				offset: (function(){
-					return -1*loc;
-				})()
-			});
-		}
-
-		//clean cookies
-		$cookies.remove('Tsai_Resume_Site_ScrollY');
 	}]
 );

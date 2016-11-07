@@ -12,7 +12,6 @@ mod.directive("navbarScrollStyle", function($window) {
             //on element load, get top position
             var elementPos= element[0].getBoundingClientRect();
             var initialTop=elementPos.top;
-            var initialBot= winjQuery.height();
 
             //get update initial positions on resize, to accomdate for a different window size
             winjQuery.resize(function(){
@@ -25,7 +24,6 @@ mod.directive("navbarScrollStyle", function($window) {
                 }else{
                     initialTop= elemjQuery.offset().top;
                 }
-                initialBot= winjQuery.height();
             });
 
             winjQuery.bind("scroll", function() { 
