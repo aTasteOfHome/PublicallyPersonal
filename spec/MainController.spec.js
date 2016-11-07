@@ -1,20 +1,35 @@
 describe('Main Controller', function() {
-	var $document;
+	var $document,
+    vmMainCtrl,
+    createVmMainCtrl,
+    scope,
+    app;
 
-	beforeEach(inject(function(_$document_, _$rootScope_, _$controller_) {
+  beforeEach(function() {
+    app = angular.mock.module('app');
+  });
+
+	beforeEach(inject(function(_$document_, _$rootScope_, $controller) {
         $document = _$document_;
-        $scope = _$rootScope_.$new();
+        scope = _$rootScope_.$new();
 
-        $vmMainCtrl = function(){
-          return _$controller_('MainController', {
-            '$scope': $scope
+        console.log($controller);
+        createVmMainCtrl = function(){
+          return $controller('MainController', {
+            $scope: scope
           });
-        }
+        };
     }));
 
 	beforeEach(function(){
 		 $document = angular.element(document);
+     
 	});
+
+  it('should exist', function(){
+    vmMainCtrl = createVmMainCtrl();
+    expect(vmMainCtrl).toBeDefined();
+  });
 
 	it('has a dummy spec to test 2 + 2', function() {
   	// An intentionally failing test. No code within expect() will never equal 4.

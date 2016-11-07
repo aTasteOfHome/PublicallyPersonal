@@ -45,9 +45,17 @@ module.exports = function(config) {
 
    // list of files / patterns to load in the browser
     files: [
+        'bower_components/jquery/dist/jquery.js',
         'bower_components/angular/angular.min.js',
         'bower_components/angular-ui-router/release/angular-ui-router.min.js',
         'node_modules/angular-mocks/*.js',
+        'bower_components/bootstrap/dist/js/bootstrap.js',
+        'bower_components/api-check/dist/api-check.js',
+        'bower_components/angular-slick/dist/slick.js',
+        'bower_components/ngSmoothScroll/angular-smooth-scroll.js',
+        'bower_components/angular-cookies/angular-cookies.js',
+        'bower_components/angular-formly/dist/formly.js',
+        'bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.js',
         '_client/**/*.js',
        '**/*.spec.js'
     ],
@@ -61,13 +69,23 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-         'bower_components/angular/angular.min.js': [ 'browserify' ],
+        // 'bower_components/jquery/dist/jquery.js': ['browserify'],
+        'bower_components/angular/angular.min.js': [ 'browserify' ],
         'bower_components/angular-ui-router/release/angular-ui-router.min.js': [ 'browserify' ],
         'node_modules/angular-mocks/*.js': ['browserify'],
+        // 'bower_components/bootstrap/dist/js/bootstrap.js': ['browserify'],
+        'bower_components/api-check/dist/api-check.js': ['browserify'],
+        'bower_components/angular-slick/dist/slick.js': ['browserify'],
+        'bower_components/ngSmoothScroll/angular-smooth-scroll.js': ['browserify'],
+        'bower_components/angular-cookies/angular-cookies.js': ['browserify'],
+        'bower_components/angular-formly/dist/formly.js': ['browserify'],
+        'bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.js': ['browserify'],
         '_client/**/*.js': [ 'browserify' ],
         '**/*.spec.js': [ 'browserify' ]
 
     },
+
+    // https://github.com/nikku/karma-browserify/issues/3
 
      browserify: {
             watch: true,
